@@ -1,0 +1,402 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Mobile first */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;300;500;700&display=swap");
+
+:root {
+  --radial-1: #5bc4f8;
+  --radial-2: #63d7ca;
+  --radial-3: #6663c6;
+  --border-1: #fff5f5;
+  --border-2: #a8e2db;
+  --border1-trans: rgba(255, 255, 255, 0.533);
+  --border2-trans: rgba(108, 193, 193, 0.533);
+  --header: #364870;
+  --text: rgb(238, 228, 228);
+  --box-shadow: rgba(0, 0, 0, 0.08);
+  --box-shadow-dark: rgba(0, 0, 0, 0.8);
+  --fb-button: #0d6ce4;
+  --fb-button-dark: #084ea3;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Sora", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main-container {
+  margin: 50% 0;
+  width: 70%;
+}
+
+.radial-gradient {
+  background: var(--radial-1);
+  background: url(circle1.svg) no-repeat, url(circle2.svg),
+    linear-gradient(217deg, var(--radial-1), var(--radial-2) 70.71%),
+    linear-gradient(127deg, var(--radial-1), var(--radial-2) 70.71%),
+    linear-gradient(336deg, var(--radial-2), var(--radial-1) 70.71%);
+}
+
+#glass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass {
+  background: linear-gradient(
+    90deg,
+    rgba(60, 208, 169, 0.2) 0%,
+    rgba(253, 255, 255, 0.2) 99%
+  );
+  backdrop-filter: blur(1em);
+  -webkit-backdrop-filter: blur(1em);
+  border-radius: 2em;
+  border: 0.15em solid var(--border1-trans);
+}
+
+aside {
+  /* background-color: blue; */
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 3em;
+  gap: 1.5em;
+}
+
+.white-glass {
+  background: radial-gradient(
+      ellipse at 50px -120px,
+      var(--border-1),
+      transparent 60%
+    ),
+    radial-gradient(ellipse at bottom, var(--border-2), transparent 90%);
+  backdrop-filter: blur(1em);
+  -webkit-backdrop-filter: blur(1em);
+  border-radius: 2em 2em 0 0;
+  border-bottom: 0.15em solid var(--border-1);
+}
+
+aside h1 {
+  font-size: 2.5em;
+  color: var(--header);
+  font-weight: 600;
+}
+
+aside p {
+  font-size: 0.8em;
+  padding: 0 1em;
+}
+
+#form-container {
+  /* background-color: yellowgreen; */
+  flex: 4 1 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#form-container-header {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: inherit;
+  justify-content: space-around;
+  align-items: stretch;
+  text-align: center;
+  padding-top: 2em;
+  width: 80%;
+  gap: 1em;
+}
+
+#form-container-header h1 {
+  color: var(--header);
+  font-size: 1.5em;
+  font-weight: 600;
+  padding-bottom: 0.5em;
+}
+
+#form-container-header p {
+  font-size: 0.6em;
+}
+
+#form-container a {
+  text-decoration: none;
+  color: var(--radial-3);
+}
+
+#form-container-header button {
+  background-color: var(--fb-button);
+  padding: 0.8em 1.5em;
+  border: none;
+  width: 100%;
+  border-radius: 0.5em;
+  color: var(--text);
+  box-shadow: var(--box-shadow) 0px 4px 12px;
+  transform: translateZ(0);
+}
+
+#form-container-header button:hover {
+  background-color: var(--fb-button-dark);
+}
+
+#form-container-header button:active {
+  background-color: var(--fb-button);
+}
+
+#facebook p {
+  padding-top: 1.5em;
+  color: var(--header);
+  padding-top: 2rem;
+}
+#form-sub-container {
+  padding: 1rem;
+  width: 80%;
+  flex: 8 1 auto;
+}
+
+input {
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  border: 0.2em solid var(--border-1);
+  background: linear-gradient(
+    to left,
+    var(--border2-trans),
+    var(--border1-trans)
+  );
+  box-shadow: var(--box-shadow) 0px 4px 12px;
+  width: 100%;
+  transition: all 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  color: var(--header);
+  font-weight: 600;
+}
+
+form {
+  box-sizing: border-box;
+  padding-right: 2rem;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#form-sub-container label {
+  font-weight: 600;
+  color: var(--header);
+}
+
+input:hover,
+input:focus,
+input:active {
+  border-color: var(--header);
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+#form-sub-container button {
+  background: linear-gradient(
+    -45deg,
+    var(--radial-3),
+    var(--radial-1),
+    var(--radial-2)
+  );
+  padding: 0.8em 1.5em;
+  border: none;
+  width: 100%;
+  border-radius: 0.5em;
+  color: var(--text);
+  box-shadow: var(--box-shadow) 0px 4px 12px;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  -webkit-transition: ease-out 0.7s;
+  -moz-transition: ease-out 0.7s;
+  transition: ease-out 0.7s;
+  display: inline-block;
+  position: relative;
+  z-index: 100;
+  opacity: 1;
+  font-weight: 600;
+}
+#form-sub-container button::before {
+  border-radius: inherit;
+  background: linear-gradient(
+    30deg,
+    var(--radial-3),
+    var(--radial-1),
+    var(--radial-2)
+  );
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: -100;
+  transition: opacity 0.5s;
+}
+#form-sub-container button:hover::before {
+  opacity: 1;
+}
+
+label[for="last-name"]::after {
+  content: "If you want to";
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+@media (min-width: 770px) {
+  #glass {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #form-container {
+    padding: 4rem;
+  }
+  .white-glass {
+    border-radius: 2em 0 0 2em;
+    border-right: 0.15em solid var(--border-1);
+  }
+  aside {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <radialGradient id="myGradient" gradientTransform="rotate(-45)">
+      <stop offset="0%"  stop-color="rgba(149,171,231,0.8)" />
+      <stop offset="100%" stop-color="rgba(117,141,227,0.7)" />
+    </radialGradient>
+  </defs>
+
+  <!-- using my linear gradient -->
+  <circle cx="85%" cy="20%" r="21em" fill="url('#myGradient')" />
+</svg>

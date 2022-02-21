@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign-up</title>
+  </head>
+  <body class="radial-gradient">
+    <main id="main-container">
+      <div id="glass" class="glass">
+        <aside id="welcome" class="white-glass">
+          <h1>creation start here</h1>
+          <p>
+            access <span>millions of</span> free, high-resolution photos you
+            can't find somewhere else
+          </p>
+        </aside>
+        <section id="form-container">
+          <div id="form-container-header">
+            <span id="alternative">
+              <h1>Sign up to Unsplash</h1>
+              <p>Already have an account? <a href="#">Login</a></p>
+            </span>
+            <span id="facebook">
+              <button>Signup using Facebook</button>
+              <p>OR</p>
+            </span>
+          </div>
+
+          <section id="form-sub-container">
+            <form action="">
+              <p>
+                <label for="first-name">
+                  first name:
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    required="required"
+                  />
+                </label>
+              </p>
+              <p>
+                <label for="last-name">
+                  last name:
+                  <input type="text" name="last-name" id="last-name" />
+                </label>
+              </p>
+              <p>
+                <label for="email">
+                  email:
+                  <input
+                    type="email"
+                    name="user-email"
+                    id="email"
+                    required="required"
+                  />
+                </label>
+              </p>
+              <p>
+                <label for="username">
+                  username:
+                  <input
+                    type="text"
+                    name="user-name"
+                    id="user-name"
+                    required="required"
+                    minlength="3"
+                  />
+                </label>
+              </p>
+              <p>
+                <label for="pwd">
+                  password:
+                  <input
+                    type="password"
+                    name="user-password"
+                    id="pwd"
+                    required="required"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])"
+                    minlength="8"
+                    title="8 characters, 1 upper case, 1 lower case, 1 special symbol"
+                  />
+                </label>
+              </p>
+              <section>
+                <button type="submit">Signup</button>
+              </section>
+            </form>
+          </section>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
